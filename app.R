@@ -28,7 +28,7 @@ onStop(\() dbDisconnect(conn))
 # efficient than system_prompt().
 #
 # This value has the shape list(role = "system", content = "<SYSTEM_PROMPT>")
-# TODO: update prompt to use SCHEMA not data. 
+# TODO: update prompt to use SCHEMA not data.
 
 system_prompt_msg <- system_prompt(dbGetQuery(conn, "SELECT * FROM NBA"), "NBA")
 
@@ -50,7 +50,7 @@ ui <- page_sidebar(
     chat_ui("chat", height = "100%", fill = TRUE)
   ),
   useBusyIndicators(),
-  
+
   # 🏷️ Header
   textOutput("show_title", container = h3),
   verbatimTextOutput("show_query") |>
@@ -97,18 +97,18 @@ ui <- page_sidebar(
           "Kaggle",
           alt = "Data Source",
           target = "_blank"
-        ), 
+        ),
         "under license ",
         tags$a(
           href = "https://creativecommons.org/licenses/by/4.0/",
           "Attribution 4.0 International (CC BY 4.0)",
           alt = "Data Source",
           target = "_blank"
-        ), 
+        ),
       ),
     )
   )
-  
+
 )
 
 server <- function(input, output, session) {

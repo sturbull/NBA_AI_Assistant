@@ -1,0 +1,13 @@
+name: NBA_AI_Assistant
+title: NBA_AI_Assistant
+username: synergia-analytics
+account: synergia-analytics
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12504337
+bundleId: 9017093
+url: https://synergia-analytics.shinyapps.io/NBA_AI_Assistant/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .Renviron|.Rprofile|chat/GIT_VERSION|NBA.csv|scripts/setup.R
