@@ -5,8 +5,10 @@ library(here)
 log <- function(...) {}
 log <- message
 
-readRenviron(".Renviron")
+#readRenviron(".Renviron")
 api_key <- Sys.getenv("OPENAI_API_KEY", "")
+
+
 if (!nzchar(api_key)) {
   stop("OPENAI_API_KEY environment variable is required")
 }
