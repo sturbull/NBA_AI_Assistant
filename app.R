@@ -64,6 +64,7 @@ ui <- page_sidebar(
     card(
       style = "height: 500px;",
       card_header("NBA data"),
+      downloadButton("downloadData", "Download Data"),
       reactableOutput("table", height = "100%")
     ),
   ),
@@ -154,7 +155,14 @@ server <- function(input, output, session) {
     )
   })
 
-
+  output$downloadData <- downloadHandler(
+    filename = function() {
+      paste("NBA_data-", Sys.Date(), ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(NBA_data(), file, row.names = FALSE)
+    }
+  )
 
 
   # ✨ Sidebot ✨ -------------------------------------------------------------
